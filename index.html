@@ -74,4 +74,11 @@ Reason for increase request
 var zf_MandArray = [ "SingleLine", "Email"]; 
 var zf_FieldArray = [ "SingleLine2", "SingleLine", "Email", "Currency", "Currency1", "MultiLine", "FileUpload"]; 
 var isSalesIQIntegrationEnabled = false;
-var salesIQFieldsArray = [];</script></body></html>
+var salesIQFieldsArray = [];</script>
+<script>
+    window.addEventListener('message', function (event) {
+    var email = event.data;
+    document.getElementById('Email').value = email;
+});
+</script>
+</body></html>
