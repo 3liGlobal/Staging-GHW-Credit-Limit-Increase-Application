@@ -151,7 +151,7 @@
                     </ul>
                 </div><!---------template Container Starts Here---------->
                 <ul>
-                    <li class="zf-fmFooter"><button class="zf-submitColor">Submit</button></li>
+                    <li class="zf-fmFooter"><button class="zf-submitColor" id="zf-submitColor">Submit</button></li>
                 </ul>
             </div><!-- 'zf-templateWrapper' ends -->
         </form>
@@ -180,12 +180,8 @@
     </script>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const buttons = document.querySelector(".zf-submitColor");
-            button.addEventListener("click", function () {
-                // Disable the button
-                this.disabled = true;
-            });
+        $('form').submit(function () {
+            $('#zf-submitColor').prop('disabled', true);
         });
     </script>
 </body>
